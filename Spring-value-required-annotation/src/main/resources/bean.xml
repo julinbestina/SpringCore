@@ -7,20 +7,13 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <context:property-placeholder location="classpath:StudentInfo.properties"/>
 
-	<context:annotation-config />
-
-	<bean id="heartObject" class="com.bl.autowired.Heart">
-		<property name="name" value="Human" />
-		<property name="noOfHeart" value="1" />
-	</bean>
-
-	<bean id="Animalheart" class="com.bl.autowired.Heart">
-		<property name="name" value="Octopus" />
-		<property name="noOfHeart" value="4" />
-	</bean>
-
-	<bean id="human" class="com.bl.autowired.Human" >
+	<bean id = "student" class = "com.bl.annotation.Student">
+	<property name="studentName" value= "${Student.studentName}" />
+	<property name="hobby" value= "${Student.hobby}" />
+	<property name="intrestedCourse" value= "${Student.intrestedCourse}" />
 	</bean>
 
 </beans>
