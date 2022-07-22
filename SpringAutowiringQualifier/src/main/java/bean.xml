@@ -5,9 +5,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id ="heart" class= "com.bl.autowired.Heart"></bean>
+	<bean id ="heartObject" class= "com.bl.autowired.Heart"></bean>
 	
-	<bean id = "human" class = "com.bl.autowired.Human" autowire ="byName">
+	<bean id = "human" class = "com.bl.autowired.Human" autowire ="byType">
 
 	</bean>
 
