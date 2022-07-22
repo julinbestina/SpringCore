@@ -7,13 +7,17 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         https://www.springframework.org/schema/context/spring-context.xsd">
-        
-        <context:property-placeholder location="classpath:StudentInfo.properties"/>
 
-	<bean id = "student" class = "com.bl.annotation.Student">
-	<property name="studentName" value= "${Student.studentName}" />
-	<property name="hobby" value= "${Student.hobby}" />
-	<property name="intrestedCourse" value= "${Student.intrestedCourse}" />
+	<context:annotation-config />
+
+	<context:property-placeholder
+		location="classpath:StudentInfo.properties" />
+
+	
+
+	<bean id="student" class="com.bl.annotation.Student">
+
+
 	</bean>
 
 </beans>

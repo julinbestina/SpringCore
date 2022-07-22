@@ -1,23 +1,26 @@
 package com.bl.annotation;
 
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
+
 public class Student {
+	
 
+	@Value("${Student.studentName}")
 	private String studentName;
+	
+	
+	@Value("${Student.hobby}")
 	private String hobby;
+	
+	@Value("${Student.intrestedCourse}")
 	private String intrestedCourse;
+	
 
-	public void setStudentName(String studentName) {
-		this.studentName = studentName;
-	}
+	
 
-	public void setHobby(String hobby) {
-		this.hobby = hobby;
-	}
-
-	public void setIntrestedCourse(String intrestedCourse) {
-		this.intrestedCourse = intrestedCourse;
-	}
-
+	
+	
 	public void displayStudentInfo() {
 
 		System.out.println("The Student name is " + studentName);
