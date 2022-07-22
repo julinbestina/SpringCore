@@ -10,10 +10,17 @@
 
 	<context:annotation-config />
 
-	<bean id="heartObject" class="com.bl.autowired.Heart"></bean>
+	<bean id="heartObject" class="com.bl.autowired.Heart">
+		<property name="name" value="Human" />
+		<property name="noOfHeart" value="1" />
+	</bean>
 
-	<bean id="human" class="com.bl.autowired.Human">
+	<bean id="Animalheart" class="com.bl.autowired.Heart">
+		<property name="name" value="Octopus" />
+		<property name="noOfHeart" value="4" />
+	</bean>
 
+	<bean id="human" class="com.bl.autowired.Human" >
 	</bean>
 
 </beans>
